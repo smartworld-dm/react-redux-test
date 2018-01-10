@@ -1,9 +1,9 @@
 // import config from '../config';
 // import store from '../store';
 /**
- * 
- * @param {String} username (same as email address) 
- * @param {String} password 
+ *
+ * @param {String} username (same as email address)
+ * @param {String} password
  */
 // export function login({ username, password }) {
 //     return function (dispatch) {
@@ -22,30 +22,6 @@
 export function getCurrentUser() {
     return function (dispatch) {
         dispatch({ type: 'USER_CURRENT_PENDING' });
-        dispatch({
-            type: 'USER_CURRENT_FULFILLED', payload: [{
-                Name: 'username',
-                Value: 'test@user.com'
-            }, {
-                Name: 'name',
-                Value: 'Test'
-            }, {
-                Name: 'family_name',
-                Value: 'User'
-            }, {
-                Name: 'email',
-                Value: 'test@user.com'
-            }, {
-                Name: 'phone_number',
-                Value: '555-11111'
-            }]
-        });
-    }
-}
-
-export function getMusicList() {
-    return function (dispatch) {
-        dispatch({ type: 'MUSICLIST_PENDING' });
         dispatch({
             type: 'USER_CURRENT_FULFILLED', payload: [{
                 Name: 'username',

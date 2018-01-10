@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getMusicList } from '../../actions/test.actions.js'
 
 class MusicList extends Component {
   componentDidMount() {
@@ -8,9 +10,18 @@ class MusicList extends Component {
   render() {
     return(
       <div>
+        We are here
       </div>
     )
   }
 }
 
-export default VenueView
+const mapStateToProps = (state, ownProps) => ({
+  musicList: state.musicList,
+})
+
+const mapDispatchToProps = {
+  getMusicList,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MusicList)

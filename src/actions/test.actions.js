@@ -1,23 +1,19 @@
+import axios from 'axios'
+
 export function getMusicList() {
-    return function (dispatch) {
-        dispatch({ type: 'MUSICLIST_PENDING' });
+  console.log("debug - 01");
+  return (dispatch) => axios.get(`https://jsonplaceholder.typicode.com/posts/1`)
+      .then(response => {
         dispatch({
-            type: 'USER_CURRENT_FULFILLED', payload: [{
-                Name: 'username',
-                Value: 'test@user.com'
-            }, {
-                Name: 'name',
-                Value: 'Test'
-            }, {
-                Name: 'family_name',
-                Value: 'User'
-            }, {
-                Name: 'email',
-                Value: 'test@user.com'
-            }, {
-                Name: 'phone_number',
-                Value: '555-11111'
-            }]
-        });
-    }
+          type: 'GET_MUSICLIST_SUCCESS',
+          payload: [{
+              Name: 'username',
+              Value: 'test@user.com'
+          }, {
+              Name: 'name',
+              Value: 'Test'
+          }]
+        })
+        return response
+      })
 }
