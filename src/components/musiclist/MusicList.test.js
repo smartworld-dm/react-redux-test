@@ -91,10 +91,22 @@ describe('>>>MusicList --- Shallow Render REACT COMPONENTS',()=>{
   it('+++ after click delete btn of second MusicList item, only first MusicList should be left', () => {
     wrapper.setProps({musicList})
     wrapper.find('button').at(3).simulate('click', { preventDefault() {} });
-    console.log("@@@ - 1", wrapper.debug());
     expect(wrapper.find('span').at(0).props().children).toEqual([ 'No ', 1, ': ' ]);
     expect(wrapper.find('span').at(1).props().children).toEqual([ 'ID ', 1, ': ' ]);
     expect(wrapper.find('span').at(2).props().children).toEqual('Dropbox');
+  });
+
+  it('+++ when click edit btn of first MusicList item, the value of inputbox in Modal should "Dropbox"', () => {
+    wrapper.setProps({musicList})
+    wrapper.find('button').at(0).simulate('click', { preventDefault() {} });
+    expect(wrapper.find('input').props().value).toEqual("Dropbox");
+  });
+
+  it('+++ when click edit btn of second MusicList item, the value of inputbox in Modal should "Mega"', () => {
+    wrapper.setProps({musicList})
+    wrapper.find('button').at(2).simulate('click', { preventDefault() {} });
+    console.log("@@@ - 1", wrapper.debug());
+    expect(wrapper.find('input').props().value).toEqual("Mega");
   });
 
 });
