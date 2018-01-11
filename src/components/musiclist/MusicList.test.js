@@ -105,7 +105,7 @@ describe('>>>MusicList --- Shallow Render REACT COMPONENTS',()=>{
   it('+++ when click edit btn of second MusicList item, the value of inputbox in Modal should "Mega"', () => {
     wrapper.setProps({musicList})
     wrapper.find('button').at(2).simulate('click', { preventDefault() {} });
-    console.log("@@@ - 1", wrapper.debug());
+    //console.log("@@@ - 1", wrapper.debug());
     expect(wrapper.find('input').props().value).toEqual("Mega");
   });
 
