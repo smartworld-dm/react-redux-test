@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getMusicList } from '../../actions/test.actions.js'
-import store from '../../store';
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -141,7 +140,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    getMusicList: () => store.dispatch(getMusicList()),
+    getMusicList: () => dispatch(getMusicList()),
   }
 }
 
