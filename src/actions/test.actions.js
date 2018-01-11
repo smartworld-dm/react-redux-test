@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export function getMusicList() {
-  console.log("debug - 0");
   return function action(dispatch) {
     dispatch({ type: 'GET_MUSICLIST_SUCCESS' })
 

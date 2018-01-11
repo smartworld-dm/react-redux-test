@@ -14,7 +14,7 @@ const customStyles = {
   }
 };
 
-class MusicList extends Component {
+export class MusicList extends React.Component{
   constructor (props) {
     super(props)
 
@@ -66,7 +66,6 @@ class MusicList extends Component {
     for(var i = 0; i < musicList.length; i++){
       if(musicList[i].id == curID){
         musicList[i].title = newTitle;
-        console.log("###", musicList);
       }
     }
     this.setState({ isOpen: false, curID: 0, newTitle: '', musicList: musicList });
@@ -106,7 +105,7 @@ class MusicList extends Component {
     if (this.state.musicList && this.state.musicList.length > 0) {
       return this.state.musicList.map((eachMusic, index) => {
         return(
-          <div>
+          <div className="eachMusic">
             <p><span>No {index + 1}: </span>
             <span>ID {eachMusic.id}: </span>
             <span>{eachMusic.title}</span>
@@ -122,7 +121,7 @@ class MusicList extends Component {
   render() {
     return(
       <div>
-        Test page
+        <h2>Test page</h2>
         <div>
         { this.showMusicList() }
         { this.showEditModal() }
