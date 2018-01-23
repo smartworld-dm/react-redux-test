@@ -1,15 +1,87 @@
-.grid {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 40px;
+html, body {
+  width: 100%;
+  height: 100%;
 }
-
-.main-content .row {
-    margin-left: 0;
-    margin-right: 0;
+body{
+  background-image: linear-gradient(45deg, grey 25%, transparent 25%, transparent 75%, grey 75%, grey),
+                    linear-gradient(45deg, grey 25%, transparent 25%, transparent 75%, grey 75%, grey);
+  background-size: 18px 18px;
+  background-position:0 0, 9px 9px
 }
-
-.footer .row {
-    margin-left: 0;
-    margin-right: 0;
+.main{
+  height: 1000px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(255,255,255,1));
+  opacity: 1;
+}
+div.left-content{
+    width: 11%;
+    height: 800px;
+}
+div.right-content{
+    width: 89%;
+    height: 800px;
+    vertical-align: top;
+}
+div.left-content, div.right-content{
+  display: inline-block;
+}
+div.top-gap{
+  height: 110px;
+}
+div.blueboard{
+  background: linear-gradient(to left, rgba(37,135,132,1), rgba(162,195,196,1));
+  width: 100%;
+  height: 100%;
+}
+div.main-content{
+  width: 90%;
+  height: 90%;
+  border: 1px solid #fff;
+  margin-left: -4%;
+}
+div.header{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #fff;
+  z-index: 100;
+}
+div.on-mc{
+  background: url('/images/john-hult-103117.png') center center no-repeat;
+  background-size: 100% 120%;
+  background-position: 0px -115px;
+  height: 93%;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+}
+div.off-mc{
+  border: 1px solid #fff;
+  background: green;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+div.gradient-mc{
+  border: 1px solid #fff;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(51,53,65,1), rgba(0,0,0,1));
+  -webkit-clip-path: polygon(0 47%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 47%, 100% 0, 100% 100%, 0% 100%);
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(2px 2px 0px red)
+    drop-shadow(2px -2px 0px red)
+    drop-shadow(-2px 2px 0px red)
+    drop-shadow(-2px -2px 0px red);
+  filter: drop-shadow(2px 2px 0px red)
+    drop-shadow(2px -2px 0px red)
+    drop-shadow(-2px 2px 0px red)
+    drop-shadow(-2px -2px 0px red);
 }
