@@ -13,10 +13,6 @@ class Header extends Component {
 
         return (
             <section className="header">
-                <TopBar logoSrc={logoSrc} altTxt={altTxt} loggedIn={loggedIn} />
-                {loggedIn ?
-                    <ProductCategoryNav /> : null
-                }
             </section>
         )
 

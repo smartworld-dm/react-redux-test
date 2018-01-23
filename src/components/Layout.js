@@ -3,7 +3,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import Header from './Layout/Header';
-import Footer from './Layout/Footer';
 import './Layout.css';
 
 class Layout extends Component {
@@ -15,24 +14,25 @@ class Layout extends Component {
         };
 
         return (
-            <main role="main">
-                <Grid fluid className="grid">
-                    <Header clientSettings={clientSettings} />
-                    <section className="main-content">
-                        <Row center="xs">
-                            <Col xs={12}>
-                                {this.props.children}
-                            </Col>
-                        </Row>
-                    </section>
-                    <section className="footer">
-                        <Row center="xs">
-                            <Col xs={12}>
-                                <Footer />
-                            </Col>
-                        </Row>
-                    </section>
-                </Grid>
+            <main role="main" class="main">
+              <div class="left-content">
+              </div>
+              <div class="right-content">
+                <div class="top-gap">
+                </div>
+                <div class="blueboard">
+                  <div class="main-content">
+                    <div class="header">
+                    </div>
+                    <div class="on-mc">
+                      <div class="off-mc">
+                      </div>
+                      <div class="gradient-mc">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </main>
         );
     }
